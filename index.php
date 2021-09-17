@@ -18,7 +18,7 @@
 	<script>
 		var source = new EventSource("getMessages.php");
 		source.onmessage = function(event) {
-		document.getElementById("result").innerHTML += event.data + "<br>";
+			document.getElementById("result").innerHTML += event.data + "<br>";
 		};
 		
 		function sendMsg()
