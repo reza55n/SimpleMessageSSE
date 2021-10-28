@@ -2,11 +2,11 @@
 header("Cache-Control: no-cache");
 header("Content-Type: text/event-stream");
 
-clearstatcache(); //To update filesize()
-$fileHeadPos = filesize('buffer.txt');
-
 if (!file_exists('buffer.txt'))
 	file_put_contents('buffer.txt', '');
+
+clearstatcache(); //To update filesize()
+$fileHeadPos = filesize('buffer.txt');
 
 
 while (true) {
